@@ -1,8 +1,5 @@
 .idea
 
-StudentClassLibrary/bin
-StudentClassLibrary/obj
+bin
 
-StudentConsoleApp/bin
-StudentConsoleApp/obj
-StudentConsoleApp/Migrations
+obj

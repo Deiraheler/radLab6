@@ -7,5 +7,5 @@ public class Students
     public int Age { get; set; }
     public string EmailAddress { get; set; }
     
-    public ICollection<StudentCourse> StudentCourses { get; set; }
+    public ICollection<StudentCourse> StudentCourses { get; set; } = new List<StudentCourse>();
 }
