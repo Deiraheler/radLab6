@@ -33,14 +33,17 @@ namespace StudentMVCAppNew.Controllers
                 return NotFound();
             }
 
-            var students = await _context.Students
+            var student = await _context.Students
+                .Include(s => s.StudentCourses)
+                .ThenInclude(sc => sc.Course)
                 .FirstOrDefaultAsync(m => m.ID == id);
-            if (students == null)
+            
+            if (student == null)
             {
                 return NotFound();
             }
 
-            return View(students);
+            return View(student);
         }
 
         // GET: Student/Create
